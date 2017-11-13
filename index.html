@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale = 1"> 
+	<link rel="stylesheet" type="text/css" href="BurgerMenu/css/styles.css">
+	<script type="text/javascript" src="BurgerMenu/js/script.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var burger = Object.create(burgerMenu);
+			burger.setup('.burgerMenu');
+		}
+	</script>
+	<title>Burger Menu 1.0 Demo</title>
+</head>
+<body>
+
+<!--
+	This menu sits on the left, and pops out on the right.
+-->
+<div id="leftMenu">
+	<ul class="burgerMenu" title="My burger menu" id="mainNavMenu">
+		<li><a href="/">Home</a></li>
+		<li><a href="http://www.ddir.com/">Dick’s Drive-in</a></li>
+		<li><a href="https://duckduck.go">DuckDuckGo</a></li>
+	</ul>	
+</div>
+
+<!--
+	This menu sits on the right. Note that the menu pops out on the left side.
+	It is automatically adjusted in the JavaScript to know where it is located
+	on screen.
+-->
+<div id="rightMenu" style="position: absolute; right: 8px; top: 8px;">
+	<ul class="burgerMenu" title="My burger menu" id="secondaryNavMenu">
+		<li><a href="/">Home</a></li>
+		<li><a href="http://www.ddir.com/">Dick’s Drive-in</a></li>
+		<li><a href="https://duckduck.go">DuckDuckGo</a></li>
+	</ul>	
+</div>
+
+<section id="content" role="main" style="font: 16px/1.3em 'Helvetica Neue', sans-serif; margin: 30px auto; width: 300px;">
+	<header>
+		<h1>
+			Burger Menu 1.0
+		</h1>
+	</header>
+	
+	<p>
+		Download and installation instructions available at <a href="https://github">GitHub</a>.
+	</p>
+</section>
+
+</body>
+</html>

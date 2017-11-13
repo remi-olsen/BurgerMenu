@@ -1,0 +1,149 @@
+/**
+ * Burger Menu 1.0
+ * A Remi A Olsen Production :D
+ * remi@remiolsen.info / https://remiolsen.info
+ * 
+ * This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License:
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ *
+ *
+ * You probably want to create a separate stylesheet with style overrides. Here are some common customizations:
+ *
+ *		* Colors: .burgerMenu. .burgerMenuLink, .burgerMenuLink:active, .bButton
+ *		* Width: .burgerMenu is by default set to 200px.
+ *
+ */
+
+.burgerMenuHolder,
+.burgerMenuHolder * {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.burgerMenuHolder {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+.burgerMenu {
+	background: rgb(0,0,0);
+	display: none;
+	left: 50%;
+	list-style: none;
+	margin: 0;
+	opacity: 1;
+	padding: 0px;
+	position: absolute;
+	text-align: left;
+	top: 60px;
+	-moz-transform: perspective(600px) scale(1) skew(0) rotateX(0);
+	-ms-transform: perspective(600px) scale(1) skew(0) rotateX(0);
+	-webkit-transform: perspective(600px) scale(1) skew(0) rotateX(0);
+	transform: perspective(600px) scale(1) skew(0) rotateX(0);
+	transform-origin: top left;
+	transition: .5s all;
+	visibility: visible;
+	white-space: nowrap;
+	width: 200px;
+	z-index: 100001;
+}
+
+.burgerMenuInactive {
+	opacity: 0;
+	-moz-transform: perspective(600px) scale(0) skew(33deg) rotateX(33deg);
+	-ms-transform: perspective(600px) scale(0) skew(33deg) rotateX(33deg);
+	-webkit-transform: perspective(600px) scale(0) skew(33deg) rotateX(33deg);
+	transform: perspective(600px) scale(0) skew(33deg) rotateX(33deg);
+	top: 25px;
+	visibility: hidden;
+}
+
+.burgerMenuItem {
+	margin: 0;
+	padding: 0;
+}
+
+.burgerMenuLink {
+	background: rgb(0,0,0);
+	border-bottom: 1px solid rgb(255,255,255);
+	color: rgb(255,255,255);
+	display: block;
+	font: 16px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 32px;
+	margin: 0;
+	padding: 10px;
+	text-align: left;
+	text-decoration: none;
+	transition: background .2s, color .2s;
+}
+
+	.burgerMenuLink:active {
+		background: rgb(200,200,200);
+		color: rgb(0,0,0);
+	}
+
+.bButton {
+	background: transparent url(../img/menu.svg) 0 0;
+	border: 0;
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 0;
+	height: 50px;
+	outline: none;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: 50px;
+	z-index: 100000;
+}
+
+	.bButton::-moz-focus-inner {
+	  border: 0;
+	}
+
+	.bButtonBurger {
+		background: rgb(0,0,0);
+		border-radius: 4px;
+		height: 10px;
+		left: 7px;
+		margin: -4px 0 0 0;
+		position: absolute;
+		top: 50%;
+		transition: .25s all;
+		width: 36px;
+	}
+
+	.bActive .bButtonBurger {
+		top: 65%;
+		transform: scaleX(0);
+		transition: .25s all;
+	}
+	
+/**
+ * White burger menu, for dark backgrounds.
+ */
+	
+.burgerMenuHolderWhite .bButton {
+	background: transparent url(../img/menu.white.svg) 0 0;
+}
+
+.burgerMenuHolderWhite .bButtonBurger {
+	background: rgb(255,255,255);
+}
+
+.burgerMenuHolderWhite .burgerMenu {
+	background: rgb(0,0,0);
+}
+
+.burgerMenuHolderWhite .burgerMenuLink {
+	background: rgb(255,255,255);
+	border-bottom: 1px solid rgb(0,0,0);
+	color: rgb(0,0,0);
+}
+
+	.burgerMenuLink:active {
+		background: rgb(50,50,50);
+		color: rgb(255,255,255);
+	}
