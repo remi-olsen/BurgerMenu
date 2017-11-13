@@ -27,5 +27,7 @@ For the HTML, something like this:
 		<li><a href="https://duckduck.go">DuckDuckGo</a></li>
 	</ul>
 	
-If you want a white icon/menu, add ''burgerMenuWhite''.
+If you want a white icon/menu, add `burgerMenuWhite`.
 	<ul class="burgerMenu burgerMenuWhite" title="My burger menu" id="mainNavMenu">
+
+Check the CSS file for information on which classes to include in a custom stylesheet for different colors. You can also copy the SVG icon from the `img` folder, and edit colors, etc. from there.
