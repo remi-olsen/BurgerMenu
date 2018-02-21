@@ -1,4 +1,4 @@
-# X-Menu
+# BurgerMenu
 
 > An animated, automated dropdown, (literal) hamburger menu script. Uses pure JavaScript, no frameworks required.
 > 
